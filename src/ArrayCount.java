@@ -1,9 +1,17 @@
+import java.sql.SQLOutput;
 import java.util.Arrays;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
+
 public class ArrayCount {
+
+
     public static void main(String[] args) {
+
+
         /*********Initializing  arrays values************
 
          int  yearsMarried [] = new int [5];
@@ -116,21 +124,42 @@ public class ArrayCount {
 
         */
         //Traverse Operation
-      //  String houseAnimals[] = {"Dog", "Cats","Sheep","Chicken"};
+        //  String houseAnimals[] = {"Dog", "Cats","Sheep","Chicken"};
         /*
         /for (String houseAimalsPrint: houseAnimals){
             System.out.println(houseAimalsPrint);
         }
         */
 
-         //Insertion Operation
+        //Insertion Operation
         //Insert on the third positions of the array
-        
 
-
+/*
+        int n, max;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of elements in the array:");
+        n = s.nextInt();
+        int a[] = new int[n];
+        System.out.println("Enter the elements of array:");
+        for(int i = 0; i < n; i++)
+        {
+            a[i] = s.nextInt();
         }
+        max = a[0];
+        for(int i = 0; i < n; i++)
+        {
+            if(max < a[i])
+            {
+                max = a[i];
+            }
+        }
+        System.out.println("Maximum value in the array is:"+max);
+    }
+
+ */
+
 
     }
 
-
+}
 
