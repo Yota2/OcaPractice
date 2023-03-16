@@ -26,27 +26,28 @@ public class Insertion {
         }
         System.out.println("Which number will you like to add?");
         int numberAdded = scan.nextInt();
-        System.out.println("In which position will you like to add the number it must between the arrays not above "+ " ' "+ lengthOfAray+ " ' ");
+        System.out.println("In which position will you like to add the number it must be between the arrays not above "+ " ' "+ lengthOfAray+ " ' ");
         int position = scan.nextInt();
         System.out.println("At Position "+ position +  " If the length is enough then . "+ numberAdded + " will be inserted now wait ...");
 
         int newAray [] = new int [lengthOfAray+1];
-        newAray[position]= numberAdded;
+        //System.out.println("At this position the number is added  "+ newAray[position]);
 
-        /*for(int i = 0 ; i< position;i++){
-        newAray[i]= arrayInp[i];
+        for (int i = 0; i < position; i++) {
+            newAray[i] = arrayInp[i];
         }
-         */
-
-        for(int i = position+1; i<newAray.length;i++ ){
-            newAray[i] = arrayInp[i-1];
-            System.out.println(numberAdded +" This is the new add array values at position "+ position  );
-        }
+        newAray[position] = numberAdded;
         arrayInp = newAray;
-         for(int i = 0; i<newAray.length;i++){
-             System.out.println(newAray[i]);
-         }
-    }
+
+        for (int i = position + 1; i < newAray.length; i++) {
+            newAray[i] = arrayInp[i-1];
+        }
+        System.out.println("This is the new values ");
+        for(int i =0; i<newAray.length;i++){
+            System.out.println(newAray[i]);
+        }
+
+        }
 
 
         /*
