@@ -10,48 +10,42 @@ public class Insertion {
 
      */
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("How much array length do you need to make?");
-        int lengthOfAray = scan.nextInt();
-        System.out.println("length of the array is " + lengthOfAray);
-        int [] arrayInp = new int [lengthOfAray];
 
-        for(int i=0; i<lengthOfAray;i++){
-            System.out.println("Give the " + (i+1) + " input");
-            arrayInp[i]= scan.nextInt();
-        }
-        System.out.println("----------------Show the given arrays----------------------");
-        for(int i = 0; i<lengthOfAray;i++){
-            System.out.println("The "+ (i+1)+ " Array input is   " + arrayInp[i]  );
-        }
-        System.out.println("Which number will you like to add?");
-        int numberAdded = scan.nextInt();
-        System.out.println("In which position will you like to add the number it must be between the arrays not above "+ " ' "+ lengthOfAray+ " ' ");
-        int position = scan.nextInt();
-        System.out.println("At Position "+ position +  " If the length is enough then . "+ numberAdded + " will be inserted now wait ...");
+//asking the user how much array index he likes to add
 
-        int newAray [] = new int [lengthOfAray+1];
-        //System.out.println("At this position the number is added  "+ newAray[position]);
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("How many array size will you like to add");
+        int arrayLength = keyboard.nextInt();
+        int inputArray [] = new int[arrayLength];
 
-        for (int i = 0; i < position; i++) {
-            newAray[i] = arrayInp[i];
+        System.out.println("Pls enter the array values...");
+        for(int i = 0 ; i<arrayLength;i++){
+            inputArray[i]= keyboard.nextInt();
+            System.out.println("Array value " + inputArray[i] );
         }
-        newAray[position] = numberAdded;
-        arrayInp = newAray;
+        System.out.println("What is  the number you want to keep in the array  ");
+        int newNumber = keyboard.nextInt();
+        System.out.println("In which array position do you like to insert the number ");
+        int position= keyboard.nextInt();
+        int newArray[] = new int[arrayLength+1];
+        for(int i=0; i<position;i++){
+            newArray[i] = inputArray[i];
+        }
+        newArray[position]=newNumber;
 
-        for (int i = position + 1; i < newAray.length; i++) {
-            newAray[i] = arrayInp[i-1];
+        for(int i = position+1; i<newArray.length;i++){
+            newArray[i]= inputArray[i-1];
         }
-        System.out.println("This is the new values ");
-        for(int i =0; i<newAray.length;i++){
-            System.out.println(newAray[i]);
+        System.out.println("This is the new added array values");
+        for(int i = 0 ; i<newArray.length;i++){
+            System.out.println(newArray[i]);
         }
 
-        }
+
 
 
         /*
-        Suppose we have an original array arr and we want to insert the element x at position pos
+        Suppose we have an original array arr, and we want to insert the element x at position pos
         int[] arr = {1, 2, 3, 4, 5};
         int x = 6;
         int pos = 2;
@@ -76,4 +70,4 @@ public class Insertion {
         arr = newArr;
 */
     }
-
+}
